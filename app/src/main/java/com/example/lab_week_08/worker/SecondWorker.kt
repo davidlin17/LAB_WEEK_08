@@ -5,11 +5,11 @@ import androidx.work.Worker
 import androidx.work.WorkerParameters
 import androidx.work.Data
 
-class FirstWorker(
-    context: Context, workerParams: WorkerParameters
+class SecondWorker(
+    context: Context,
+    workerParams: WorkerParameters
 ) : Worker(context, workerParams) {
-    //This function executes the predefined process based on the input
-    //and return an output after it's done
+
     override fun doWork(): Result {
         //Get the parameter input
         val id = inputData.getString(INPUT_DATA_ID)
@@ -25,6 +25,7 @@ class FirstWorker(
         //Return the output
         return Result.success(outputData)
     }
+
     companion object {
         const val INPUT_DATA_ID = "inId"
         const val OUTPUT_DATA_ID = "outId"
