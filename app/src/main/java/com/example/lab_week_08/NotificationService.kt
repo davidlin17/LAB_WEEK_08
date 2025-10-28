@@ -106,7 +106,7 @@ class NotificationService : Service() {
         val notificationManager = getSystemService(NOTIFICATION_SERVICE) as NotificationManager
 
         for (i in 10 downTo 0) {
-            Thread.sleep(1000L)
+            Thread.sleep(5000L)
             notificationBuilder
                 .setContentText("$i seconds until last warning")
                 .setSilent(true)
